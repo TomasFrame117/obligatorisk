@@ -1,0 +1,7 @@
+body {
+    background-color: rgb(141, 141, 233);
+}
+div {
+    display: grid;
+    justify-content: center;
+}

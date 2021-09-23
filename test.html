@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.17.2.css">
+</head>
+<body>
+
+
+    <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+
+  <script src="/controller.js"></script>
+  <script src="https://code.jquery.com/qunit/qunit-2.17.2.js"></script>
+  <script>
+      let numbers = [7, 3, 1, 5, 8];
+  let chosenBar;
+  let inputValue;
+
+  function show() {};
+
+      QUnit.module("test");
+      QUnit.test("legge til bar", function(assert) {
+        choseBar(1);
+
+          assert.equal(chosenBar, 1, "verdi er lik.");
+      })
+
+      QUnit.test("se om samme stolpe er valgt", function(assert) {
+        choseBar(1);
+
+
+          assert.equal(chosenBar, "", "verdi er null. Ah, I knew it! I know Milanien when I see Milanien.");
+      })
+
+           QUnit.test("endre valgt stolpe", function(assert) {
+            inputValue = 4;
+        numbers = [7, 3, 1, 5, 8];
+        editBar(5);
+       
+        assert.deepEqual(numbers, [7, 3, 1, 5, 4], "Verdi ble endret i liste. In hear of the beat, may courage find its way.");
+    })
+
+    QUnit.test("Slette valgt stolpe.", function(assert) {
+    numbers = [7, 3, 1, 5, 8];
+    removeBar(5);
+    
+    assert.deepEqual(numbers, [7, 3, 1, 5], "Verdi ble slettet fra liste. May Teesaree Aankh, open for guidance");
+    });
+
+    
+
+  </script>
+</body>
+</html>
